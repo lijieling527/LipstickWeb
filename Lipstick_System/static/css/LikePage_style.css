@@ -1,0 +1,34 @@
+﻿body {
+    font-style: italic;
+    font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.section-title {
+    padding: 5px;
+    background-color: #a53b28;
+}
+
+.lip-pic {
+    width: 150px;
+}
+
+.delete-pic {
+    width: 30px;
+}
+.like-pic {
+    width: 30px;
+}
+
+#lipstick-flters li {
+    display: inline-block;
+    font-weight: 500;
+    color: var(--dark);
+    cursor: pointer;
+    transition: .5s;
+    border-bottom: 2px solid transparent;
+}
+#lipstick-flters li:hover,
+#lipstick-flters li.active {
+    color: var(--primary);
+    border-color: var(--primary);
+}

@@ -1,0 +1,202 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Lipstick_HomePage</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>    
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>   
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>    
+    <link rel="stylesheet" href="{{url_for('static', filename='/css/HomePage_style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='/css/Team_Card.css')}}">
+    <script language="JavaScript" type="text/javascript" src="{{url_for('static', filename='/js/HomePage.js')}}"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body id="page-top" data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
+    <nav class="navbar navbar-expand-lg navbar-dark  fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="#page-top">
+                <img class="logo-pic" src="{{url_for('static', filename='/image/LipGIRL.svg')}}" alt="LipG" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="/check_if_login">MEMBER</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#search">Search</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#band">Band</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Masthead-->
+    <header class="masthead">
+        <div class="container">
+            <div class="masthead-subheading">Welcome To Our Web!</div>
+            <div class="masthead-heading text-uppercase">I Need This Lipstick !</div>
+            <a class="btn btn-outline-light btn-xl text-uppercase" href="#about">Tell Me More</a>
+        </div>
+    </header>
+    <!--About-->
+    <section class="page-section" id="about">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">About</h2>
+                <h3 class="section-subheading text-muted">專櫃口紅太貴?平替口紅?</h3>
+            </div>
+        </div>
+    </section>
+    <!-- Search-->
+    <section class="page-section" id="search">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">Search</h2>
+                <h3 class="section-subheading text-muted">選定你要的口紅顏色，讓我們來幫你找到你要的那隻口紅!</h3>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <img class="search-pic" id = "text_search" src="{{url_for('static', filename='/image/s-words.png')}}" />
+                    <h4 class="s-text">文字搜尋</h4>
+                    <p class="s-text2">將想要的品牌、色號輸入，來尋找口紅</p>
+                </div>
+                <div class="col-md-4">
+                    <img class="search-pic" id = "pic_search" src="{{url_for('static', filename='/image/s-pic.png')}}" />
+                        <h4 class="s-text">圖片搜尋</h4>
+                    <p class="s-text2">將想要口紅圖片導入，來尋找口紅</p>
+                </div>
+                <div class="col-md-4">
+                    <img class="search-pic" id = "color_search" src="{{url_for('static', filename='/image/s-pale.png')}}" />
+                    <h4 class="s-text">調色盤搜尋</h4>
+                    <p class="s-text2">利用調色盤，選擇想要的口紅顏色</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Band-->
+    <section class="page-section" id="band">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">Band</h2>
+                <h3 class="section-subheading text-muted">What do we have ?我們有的品牌</h3>
+            </div>
+            <div class="row">
+                <h4 class="b-text text-center">專櫃</h4>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="band">
+                        <img class="mx-auto rounded-circle band-pic" src="{{url_for('static', filename='/image/YSL.jpg')}}" alt="..." />
+                        <h4>YSL</h4>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="band">
+                        <img class="mx-auto rounded-circle band-pic" src="{{url_for('static', filename='/image/YSL.jpg')}}" alt="..." />
+                        <h4>Mac</h4>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="band">
+                        <img class="mx-auto rounded-circle band-pic" src="{{url_for('static', filename='/image/YSL.jpg')}}" alt="..." />
+                        <h4>Bobbi Brown</h4>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="band">
+                        <img class="mx-auto rounded-circle band-pic" src="{{url_for('static', filename='/image/YSL.jpg')}}" alt="..." />
+                        <h4>Dior</h4>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="band">
+                        <img class="mx-auto rounded-circle band-pic" src="{{url_for('static', filename='/image/YSL.jpg')}}" alt="..." />
+                        <h4>ARMANI</h4>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="band">
+                        <img class="mx-auto rounded-circle band-pic" src="{{url_for('static', filename='/image/YSL.jpg')}}" alt="..." />
+                        <h4>CHANEL</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <h4 class="b-text text-center">開架</h4>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="band">
+                        <img class="mx-auto rounded-circle band-pic" src="{{url_for('static', filename='/image/YSL.jpg')}}" alt="..." />
+                        <h4>I'M MEME'</h4>
+                    </div>
+                </div>
+                <div class="col-md-4">{{ url_for('static', filename='image/s-word.png') }}
+                    <div class="band">
+                        <img class="mx-auto rounded-circle band-pic" src="{{url_for('static', filename='/image/YSL.jpg')}}" alt="..." />
+                        <h4>1028</h4>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="band">
+                        <img class="mx-auto rounded-circle band-pic" src="{{url_for('static', filename='/image/YSL.jpg')}}" alt="..." />
+                        <h4>Maybeline</h4>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="band">
+                        <img class="mx-auto rounded-circle band-pic" src="{{url_for('static', filename='/image/YSL.jpg')}}" alt="..." />band-pic
+                        <h4>Heme</h4>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="band">
+                        <img class="mx-auto rounded-circle band-pic" src="{{url_for('static', filename='/image/YSL.jpg')}}" alt="..." />
+                        <h4>Solone</h4>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="band">
+                        <img class="mx-auto rounded-circle band-pic" src="{{url_for('static', filename='/image/YSL.jpg')}}" alt="..." />
+                        <h4>L'Oréal Paris</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team-->
+    <section class="page-section" id="team">
+        <h4 class="b-text text-center">人員</h4>
+        <div class = "row1">
+            <div class="card">
+                <div class="photo">
+                    <img src="{{url_for('static', filename='/image/grape.jpg')}}">
+                </div>
+                <h2>謝昀彤</h2>
+            </div>
+            <div class="card">
+                <div class="photo">
+                    <img src="{{url_for('static', filename='/image/sunny.gif')}}">
+                </div>
+                <h2>林宸希</h2>
+            </div>
+            <div class="card">
+                <div class="photo">
+                    <img src="{{url_for('static', filename='/image/Hellena.jpg')}}">
+                </div>
+                <h2>郭晏涵</h2>
+            </div>
+            <div class="card">
+                <div class="photo">
+                    <img src="{{url_for('static', filename='/image/star.jpg')}}">
+                </div>
+                <h2>王唯欣</h2>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
