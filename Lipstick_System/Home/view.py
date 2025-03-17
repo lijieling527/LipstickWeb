@@ -6,7 +6,19 @@ import re
 
 @app.route('/')
 def index():
-    return render_template('Home/HomePage.html')  # 或者重定向到 /home
+    lipstick_1028=lipsticks.find({"brand":"1028"})
+    lipstick_heme=lipsticks.find({"brand":"heme"})
+    lipstick_solone=lipsticks.find({"brand":"solone"})
+    lipstick_immeme=lipsticks.find({"brand":"I'M MEME"})
+    lipstick_maybelline=lipsticks.find({"brand":"maybelline"})
+    ##
+    lipstick_loreal=lipsticks.find({"brand":"L'Oréal"})
+    lipstick_BOBBIBROWN=lipsticks.find({"brand":"BOBBI BROWN"})
+    ##
+
+    return render_template('Home/HomePage.html',lipstick_1028=lipstick_1028,lipstick_heme=lipstick_heme,lipstick_solone=lipstick_solone
+                           ,lipstick_immeme=lipstick_immeme,lipstick_maybelline=lipstick_maybelline,lipstick_loreal=lipstick_loreal,lipstick_BOBBIBROWN=lipstick_BOBBIBROWN
+                           )
 
 @app.route('/home')
 def home():
