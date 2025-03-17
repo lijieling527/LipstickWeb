@@ -1,3 +1,4 @@
 from Lipstick_System import server
 
-server.serve_forever()
+if __name__ == "__main__":
+    server.serve_forever()

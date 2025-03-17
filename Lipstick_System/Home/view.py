@@ -86,3 +86,6 @@ def Text_search():
         re=re+","+x
         i+=1;
     return render_template('Search/Text_Search.html',brand=re,lips=result)
+
+# if __name__ == "__main__":
+#     app.run(debug=True)
