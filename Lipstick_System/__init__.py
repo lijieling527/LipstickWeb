@@ -14,8 +14,7 @@ port = int(os.environ.get("PORT", 5000))
 server = pywsgi.WSGIServer(('0.0.0.0', port), app)
 mail.init_app(app)
 
-client = MongoClient(Config.URI, tls=True, tlsAllowInvalidCertificates=True)
-
+client = MongoClient(Config.URI, ssl=True, ssl_cert_reqs="CERT_NONE")
 db = client.LIPSTICK_SYSTEM
 
 from Lipstick_System.Login_Register import view
