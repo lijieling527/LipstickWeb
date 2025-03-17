@@ -4,6 +4,14 @@ import bson
 from flask import Flask, render_template, request, redirect, session, jsonify
 import re
 
+
+from gevent import pywsgi
+from config import Config
+from pymongo.mongo_client import MongoClient
+import os
+port = int(os.environ.get("PORT", 5000))
+server = pywsgi.WSGIServer(("0.0.0.0", port), app)
+
 @app.route('/')
 def index():
     lipstick_1028=lipsticks.find({"brand":"1028"})
