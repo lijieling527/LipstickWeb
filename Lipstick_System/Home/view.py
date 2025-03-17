@@ -4,6 +4,10 @@ import bson
 from flask import Flask, render_template, request, redirect, session, jsonify
 import re
 
+@app.route('/')
+def index():
+    return render_template('Home/HomePage.html')  # 或者重定向到 /home
+
 @app.route('/home')
 def home():
     lipstick_1028=lipsticks.find({"brand":"1028"})
