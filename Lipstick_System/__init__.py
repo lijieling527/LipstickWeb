@@ -10,7 +10,7 @@ app = Flask(__name__)
 app.config.from_object(Config)
 bcrypt = Bcrypt(app)
 # server = pywsgi.WSGIServer(('127.0.0.2', 5000), app)
-port = int(os.environ.get("PORT", 10000))
+port = int(os.environ.get("PORT", 5000))
 server = pywsgi.WSGIServer(('0.0.0.0', port), app)
 mail.init_app(app)
 
