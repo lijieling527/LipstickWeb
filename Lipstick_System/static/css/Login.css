@@ -3,6 +3,9 @@ body{
     background-repeat: repeat;
     background-size: 70%;
 }
+a.btn.btn-outline-light.btn-xl {
+    width: 100%;
+}
 
 .login{    
     width: 100%;

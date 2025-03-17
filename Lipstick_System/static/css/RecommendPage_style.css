@@ -1,0 +1,70 @@
+body {
+    font-style: italic;
+    font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.like-pic {
+    width: 20px;
+}
+
+
+.card {
+    justify-content: center;
+    width: 200px;
+    height: 300px;
+}
+
+.linkform {
+    width: 100%;
+    height: 150px;
+}
+.card-img-top {
+   
+    height: 150px;
+}
+
+
+.card-body {
+    overflow: auto;
+}
+
+.card-body::-webkit-scrollbar {
+    width: 7px;
+}
+
+.card-body::-webkit-scrollbar-button {
+    background: transparent;
+}
+
+.card-text, .card-title {
+    text-align: center;
+}
+
+    .card-text button {
+        /*background-image: url('../static/image/heart.png');*/
+        width: 30px;
+        height: 30px;
+    }
+
+
+.section-title {
+    padding: 5px;
+    background-color: #a53b28;
+}
+
+
+
+.btn-link {
+    display: inline-block;
+    font-weight: 500;
+    color: var(--dark);
+    cursor: pointer;
+    transition: .5s;
+    border-bottom: 2px solid transparent;
+}
+
+    .btn-link:hover,
+    .btn-link.active {
+        color: var(--primary);
+        border-color: var(--primary);
+    }

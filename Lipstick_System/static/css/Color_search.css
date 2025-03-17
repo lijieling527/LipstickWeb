@@ -1,0 +1,14 @@
+body {
+    background-image: url("../image/color_bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+#colorPicker {
+    width: 100px;
+    height: 35px;
+}
+.form_color {
+    width: 200px;
+    height: 30px;
+}

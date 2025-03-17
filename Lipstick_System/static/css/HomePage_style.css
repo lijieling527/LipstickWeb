@@ -1,3 +1,57 @@
+
+#search a:link {
+    text-decoration:none;
+    color:burlywood;
+}
+
+#search a:visited {
+    color: gainsboro;
+}
+
+#search a:hover {
+    text-decoration: underline;
+    color: #FFD700;
+}
+
+.like-pic {
+    width: 20px;
+}
+
+#about, #search, #band, #team {
+    background-color: rgb(41,36,33);
+    color: white;
+}
+
+.b-text {
+    color: white;
+}
+
+.card-img-top{
+    width:200px;
+    height:150px;
+}
+.card-body {
+    overflow: auto;
+}
+
+.card-body::-webkit-scrollbar {
+    width: 7px;
+}
+
+.card-body::-webkit-scrollbar-button {
+    background: transparent;
+}
+
+.card-text, .card-title {
+    text-align: center;
+}
+.card-text button{
+    /*background-image: url('../static/image/heart.png');*/
+    width:30px;
+    height:30px;
+}
+
+
 p {
     line-height: 1.75;
 }
@@ -13,6 +67,7 @@ p {
 }
 
 .page-section h3.section-subheading{
+   color:lemonchiffon;
     font-size: 1rem;
     font-weight: 400;
     font-style: italic;

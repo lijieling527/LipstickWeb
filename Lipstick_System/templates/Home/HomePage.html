@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <title>Lipstick_HomePage</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>    
-    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script> 
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.3.0/jquery.form.min.js" integrity="sha384-qlmct0AOBiA2VPZkMY3+2WqkHtIQ9lSdAsAn5RUJD/3vA5MKDgSGcdmIv4ycVxyn" crossorigin="anonymous"></script>    
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>    
     <link rel="stylesheet" href="{{url_for('static', filename='/css/HomePage_style.css')}}">
     <link rel="stylesheet" href="{{url_for('static', filename='/css/Team_Card.css')}}">
@@ -26,8 +27,8 @@
                     <li class="nav-item"><a class="nav-link" href="/check_if_login">MEMBER</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#search">Search</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#band">Band</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#band">Brand</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link" href="#team">Team</a></li> -->
                 </ul>
             </div>
         </div>
@@ -45,7 +46,7 @@
         <div class="container">
             <div class="text-center">
                 <h2 class="section-heading text-uppercase">About</h2>
-                <h3 class="section-subheading text-muted">專櫃口紅太貴?平替口紅?</h3>
+                <h3 class="section-subheading ">專櫃口紅太貴?平替口紅?<br />別人美照裡的那隻口紅到底是什麼?市面上那麼多到底哪隻才是我要的?</h3>
             </div>
         </div>
     </section>
@@ -54,22 +55,22 @@
         <div class="container">
             <div class="text-center">
                 <h2 class="section-heading text-uppercase">Search</h2>
-                <h3 class="section-subheading text-muted">選定你要的口紅顏色，讓我們來幫你找到你要的那隻口紅!</h3>
+                <h3 class="section-subheading ">選定你要的口紅顏色，讓我們來幫你找到你要的那隻口紅!</h3>
             </div>
             <div class="row text-center">
                 <div class="col-md-4">
                     <img class="search-pic" id = "text_search" src="{{url_for('static', filename='/image/s-words.png')}}" />
-                    <h4 class="s-text">文字搜尋</h4>
+                    <h4 class="s-text"><a href="/text_search">文字搜尋</a></h4>
                     <p class="s-text2">將想要的品牌、色號輸入，來尋找口紅</p>
                 </div>
                 <div class="col-md-4">
                     <img class="search-pic" id = "pic_search" src="{{url_for('static', filename='/image/s-pic.png')}}" />
-                        <h4 class="s-text">圖片搜尋</h4>
+                        <h4 class="s-text"><a href="/pic_search">圖片搜尋</a></h4>
                     <p class="s-text2">將想要口紅圖片導入，來尋找口紅</p>
                 </div>
                 <div class="col-md-4">
                     <img class="search-pic" id = "color_search" src="{{url_for('static', filename='/image/s-pale.png')}}" />
-                    <h4 class="s-text">調色盤搜尋</h4>
+                    <h4 class="s-text"><a href="/color_search">調色盤搜尋</a></h4>
                     <p class="s-text2">利用調色盤，選擇想要的口紅顏色</p>
                 </div>
             </div>
@@ -79,96 +80,236 @@
     <section class="page-section" id="band">
         <div class="container">
             <div class="text-center">
-                <h2 class="section-heading text-uppercase">Band</h2>
-                <h3 class="section-subheading text-muted">What do we have ?我們有的品牌</h3>
+                <h2 class="section-heading text-uppercase">Brand</h2>
+                <h3 class="section-subheading ">What do we have ?我們有的口紅</h3>
             </div>
             <div class="row">
                 <h4 class="b-text text-center">專櫃</h4>
             </div>
+            <!--loreal-->
             <div class="row">
-                <div class="col-md-4">
-                    <div class="band">
-                        <img class="mx-auto rounded-circle band-pic" src="{{url_for('static', filename='/image/YSL.jpg')}}" alt="..." />
-                        <h4>YSL</h4>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="band">
-                        <img class="mx-auto rounded-circle band-pic" src="{{url_for('static', filename='/image/YSL.jpg')}}" alt="..." />
-                        <h4>Mac</h4>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="band">
-                        <img class="mx-auto rounded-circle band-pic" src="{{url_for('static', filename='/image/YSL.jpg')}}" alt="..." />
-                        <h4>Bobbi Brown</h4>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="band">
-                        <img class="mx-auto rounded-circle band-pic" src="{{url_for('static', filename='/image/YSL.jpg')}}" alt="..." />
-                        <h4>Dior</h4>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="band">
-                        <img class="mx-auto rounded-circle band-pic" src="{{url_for('static', filename='/image/YSL.jpg')}}" alt="..." />
-                        <h4>ARMANI</h4>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="band">
-                        <img class="mx-auto rounded-circle band-pic" src="{{url_for('static', filename='/image/YSL.jpg')}}" alt="..." />
-                        <h4>CHANEL</h4>
-                    </div>
-                </div>
+                <h5 class="b-text text-center ">L'Oréal</h5>
             </div>
+            <div class="row">
+                {% for i in lipstick_loreal %}
+                <div class="col-md-2">
+                    <div class="card">
+                        <form class="linkform" method="POST" onsubmit="return noReloadlink()">
+                            <button href="{{i.link}}" target="_blank" class="liplink" value="{{i.pic}}">
+                            <img class="card-img-top" src="{{i.pic}}"></button>
+                        </form>
+                        <div id="img_r"></div>
+                        <div class="card-body">
+                            <h6 class="card-title">{{ i.name }}</h6>
+                            <p class="card-text">{{ i.color }}</p>
+                            <form class="myForm" method="POST" onsubmit="return noReload()">
+                                <h7 class="card-text">
+                                    <button type="submit" class="btn btn-light " name="image_url" value="{{i.pic}}">
+                                        <image class="like-pic" src="{{url_for('static', filename='/image/heart.png')}}" />
+                                    </button>
+                                    價格 : {{ i.price }}
+                                </h7>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+            <!--BOBBI BROWN-->
+            <div class="row">
+                <h5 class="b-text text-center ">BOBBI BROWN</h5>
+            </div>
+            <div class="row">
+                {% for i in lipstick_BOBBIBROWN %}
+                <div class="col-md-2">
+                    <div class="card">
+                        <form class="linkform" method="POST" onsubmit="return noReloadlink()">
+                            <button href="{{i.link}}" target="_blank" class="liplink" value="{{i.pic}}">
+                            <img class="card-img-top" src="{{i.pic}}"></button>
+                        </form>
+                        <div class="card-body">
+
+                            <h6 class="card-title">{{ i.name }}</h6>
+                            <p class="card-text">{{ i.color }}</p>
+                            <form clss="myForm" method="POST" onsubmit="return noReload()">
+                                <h7 class="card-text">
+                                    <button type="submit" class="btn btn-light " name="image_url" value="{{i.pic}}">
+                                        <image class="like-pic" src="{{url_for('static', filename='/image/heart.png')}}" />
+                                    </button>
+                                    價格 : {{ i.price }}
+                                </h7>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+
             <div class="row">
                 <h4 class="b-text text-center">開架</h4>
             </div>
+            <!--1028-->
             <div class="row">
-                <div class="col-md-4">
-                    <div class="band">
-                        <img class="mx-auto rounded-circle band-pic" src="{{url_for('static', filename='/image/YSL.jpg')}}" alt="..." />
-                        <h4>I'M MEME'</h4>
-                    </div>
-                </div>
-                <div class="col-md-4">{{ url_for('static', filename='image/s-word.png') }}
-                    <div class="band">
-                        <img class="mx-auto rounded-circle band-pic" src="{{url_for('static', filename='/image/YSL.jpg')}}" alt="..." />
-                        <h4>1028</h4>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="band">
-                        <img class="mx-auto rounded-circle band-pic" src="{{url_for('static', filename='/image/YSL.jpg')}}" alt="..." />
-                        <h4>Maybeline</h4>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="band">
-                        <img class="mx-auto rounded-circle band-pic" src="{{url_for('static', filename='/image/YSL.jpg')}}" alt="..." />band-pic
-                        <h4>Heme</h4>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="band">
-                        <img class="mx-auto rounded-circle band-pic" src="{{url_for('static', filename='/image/YSL.jpg')}}" alt="..." />
-                        <h4>Solone</h4>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="band">
-                        <img class="mx-auto rounded-circle band-pic" src="{{url_for('static', filename='/image/YSL.jpg')}}" alt="..." />
-                        <h4>L'Oréal Paris</h4>
-                    </div>
-                </div>
+                <h5 class="b-text text-center ">1028</h5>
             </div>
+            <div class="row">
+                {% for i in lipstick_1028 %}
+                <div class="col-md-2">
+                    <div class="card">
+                        <form class="linkform" method="POST" onsubmit="return noReloadlink()">
+                            <button href="{{i.link}}" target="_blank" class="liplink" value="{{i.pic}}">
+                            <img class="card-img-top" src="{{i.pic}}"></button>
+                        </form>
+                        <div class="card-body">
+
+                            <h6 class="card-title">{{ i.name }}</h6>
+                            <p class="card-text">{{ i.color }}</p>
+                            <form class="myForm" method="POST" onsubmit="return noReload()">
+                                <h7 class="card-text">
+                                    <button type="submit" class="btn btn-light " name="image_url" value="{{i.pic}}">
+                                        <image class="like-pic" src="{{url_for('static', filename='/image/heart.png')}}" />
+                                    </button>
+                                    價格 : {{ i.price }}
+                                </h7>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+            <!--heme-->
+            <div class="row">
+                <h5 class="b-text text-center ">heme</h5>
+            </div>
+            <div class="row">
+                {% for i in lipstick_heme %}
+                <div class="col-md-2">
+                    <div class="card">
+                        <form class="linkform" method="POST" onsubmit="return noReloadlink()">
+                            <button href="{{i.link}}" target="_blank" class="liplink" value="{{i.pic}}">
+                                <img class="card-img-top" src="{{i.pic}}">
+                            </button>
+                        </form>
+                        <div class="card-body">
+
+                            <h6 class="card-title">{{ i.name }}</h6>
+                            <p class="card-text">{{ i.color }}</p>
+                            <form class="myForm" method="POST" onsubmit="return noReload()">
+                                <h7 class="card-text">
+                                    <button type="submit" class="btn btn-light " name="image_url" value="{{i.pic}}">
+                                        <image class="like-pic" src="{{url_for('static', filename='/image/heart.png')}}" />
+                                    </button>
+                                    價格 : {{ i.price }}
+                                </h7>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+            <!--solone-->
+            <div class="row">
+                <h5 class="b-text text-center ">solone</h5>
+            </div>
+            <div class="row">
+                {% for i in lipstick_solone %}
+                <div class="col-md-2">
+                    <div class="card">
+                        <form class="linkform" method="POST" onsubmit="return noReloadlink()">
+                            <button href="{{i.link}}" target="_blank" class="liplink" value="{{i.pic}}">
+                            <img class="card-img-top" src="{{i.pic}}"></button>
+                        </form>
+                        <div class="card-body">
+
+                            <h6 class="card-title">{{ i.name }}</h6>
+                            <p class="card-text">{{ i.color }}</p>
+
+                            <form class="myForm" method="POST" onsubmit="return noReload()">
+                                <h7 class="card-text">
+                                    <button type="submit" class="btn btn-light " name="image_url" value="{{i.pic}}">
+                                        <image class="like-pic" src="{{url_for('static', filename='/image/heart.png')}}" />
+                                    </button>
+                                    價格 : {{ i.price }}
+                                </h7>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+            <!--I'm meme'-->
+            <div class="row">
+                <h5 class="b-text text-center ">I'M MEME</h5>
+            </div>
+            <div class="row">
+                {% for i in lipstick_immeme %}
+                <div class="col-md-2">
+                    <div class="card">
+                        <form class="linkform" method="POST" onsubmit="return noReloadlink()">
+                            <button href="{{i.link}}" target="_blank" class="liplink" value="{{i.pic}}">
+                            <img class="card-img-top" src="{{i.pic}}"></button>
+                        </form>
+                        <div class="card-body">
+
+                            <h6 class="card-title">{{ i.name }}</h6>
+                            <p class="card-text">{{ i.color }}</p>
+                            <form class="myForm" method="POST" onsubmit="return noReload()">
+                                <h7 class="card-text">
+                                    <button type="submit" class="btn btn-light " name="image_url" value="{{i.pic}}">
+                                        <image class="like-pic" src="{{url_for('static', filename='/image/heart.png')}}" />
+                                    </button>
+                                    價格 : {{ i.price }}
+                                </h7>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+            <!--maybelline-->
+            <div class="row">
+                <h5 class="b-text text-center ">Maybelline</h5>
+            </div>
+            <div class="row">
+                {% for i in lipstick_maybelline %}
+                <div class="col-md-2">
+                    <div class="card">
+                        <form class="linkform" method="POST" onsubmit="return noReloadlink()">
+                            <button href="{{i.link}}" target="_blank" class="liplink" value="{{i.pic}}">
+                            <img class="card-img-top" src="{{i.pic}}"></button>
+                        </form>
+                        <div class="card-body">
+                            <h6 class="card-title">{{ i.name }}</h6>
+                            <p class="card-text">{{ i.color }}</p>
+                            <form class="myForm" method="POST" onsubmit="return noReload()">
+                                <h7 class="card-text">
+                                    <button type="submit" class="btn btn-light " name="image_url" value="{{i.pic}}">
+                                        <image class="like-pic" src="{{url_for('static', filename='/image/heart.png')}}" />
+                                    </button>
+                                    價格 : {{ i.price }}
+                                </h7>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+
         </div>
     </section>
-
     <!-- Team-->
-    <section class="page-section" id="team">
+    <!-- <section class="page-section" id="team">
         <h4 class="b-text text-center">人員</h4>
         <div class = "row1">
             <div class="card">
@@ -196,7 +337,7 @@
                 <h2>王唯欣</h2>
             </div>
         </div>
-    </section>
+    </section> -->
 
 </body>
 </html>

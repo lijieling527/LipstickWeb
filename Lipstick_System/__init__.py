@@ -9,7 +9,7 @@ mail = Mail()
 app = Flask(__name__)
 app.config.from_object(Config)
 bcrypt = Bcrypt(app)
-server = pywsgi.WSGIServer(('0.0.0.0', 5000), app)
+server = pywsgi.WSGIServer(('127.0.0.2', 5000), app)
 mail.init_app(app)
 
 client = MongoClient(Config.URI)

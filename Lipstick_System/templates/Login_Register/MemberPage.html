@@ -10,17 +10,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <div class = "whole-signin-page">
-        {% include "navbar.html" %}  
-        <div class = "login rounded-4">
-            <div class="text-center">
-                <h2 class="text-uppercase text-member">{{user_name}}</h2>
-                <p><a class="btn btn-outline-light btn-xl " href="/reset_password">修改密碼</a><br></p>
-                <p><a class="btn btn-outline-light btn-xl " href="/collection">會員喜好</a><br></p>
-                <p><a class="btn btn-outline-light btn-xl " href="/history">瀏覽紀錄</a><br></p>
-                <p><a class="btn btn-outline-light btn-xl " href="/logout">登出</a><br></p>
-            </div>            
-        </div> 
+    <div class="whole-signin-page">
+        {% include "navbar.html" %}
+        <div class="d-flex justify-content-center align-items-center vh-100">
+            <div class="login rounded-4 align-items-center">
+                <div class="text-center">
+                    <h2 class="text-uppercase text-member">{{user_name}}</h2>
+                    <p><a class="btn btn-outline-light btn-xl " href="/reset_password">修改密碼</a><br></p>
+                    <p><a class="btn btn-outline-light btn-xl " href="/collection">會員喜好</a><br></p>
+                    <p><a class="btn btn-outline-light btn-xl " href="/history">瀏覽紀錄</a><br></p>
+                    <p><a class="btn btn-outline-light btn-xl " href="/logout">登出</a><br></p>
+                </div>
+            </div>
+
+        </div>
     </div>
 </body>
 </html>

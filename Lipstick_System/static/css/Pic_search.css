@@ -1,0 +1,46 @@
+body {
+    background-image: url("../image/color_bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+#confirmColor {
+    width: 100px;
+    height: 35px;
+}
+.header {
+    flex-wrap: nowrap;
+    /* flexbox setup */
+    display: flex;
+    justify-content: center;
+}
+.form{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items:flex-start;
+}
+.update{
+    /* flexbox setup */
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+}
+.colorArea{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+
+}
+.P{
+    width: 100px;height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+}
+.C{
+    width: 500px;height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+}
